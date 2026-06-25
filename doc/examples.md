@@ -65,6 +65,7 @@ Using `superfast` or `veryfast` is ideal for realtime recording, though you can 
 wf-recorder -c libx264 -p preset=superfast
 ```
 
+
 ## Lossless video and RGB recording (H.264)
 ### Lossless
 The `x264` encoder can record in lossless compression. The `CRF` value adjusts the video's control rate factor, in other words the quality of your video.
@@ -84,7 +85,6 @@ wf-recorder -c libx264rgb
 ```
 
 The pixel format does not need to be specified. Recording in RGB also fixes other inaccurate video colors you might find.
-
 
 ### True lossless
 Combining lossless and RGB encoding results in a video 100% identical to what you see on your screen:

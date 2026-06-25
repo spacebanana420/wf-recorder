@@ -90,6 +90,5 @@ wf-recorder -f test-vaapi.mkv -c h264_vaapi -d /dev/dri/renderD128
 ```
 Some drivers report support for rgb0 data for vaapi input but really only support yuv planar formats. In this case, use the `-x yuv420p` or `--pixel-format yuv420p` option in addition to the vaapi options to convert the data to yuv planar data before sending it to the GPU.
 
-
 ### More examples
 More examples [can be found here](doc/examples.md)
