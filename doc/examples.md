@@ -4,7 +4,7 @@ Below is a more extensive list of recording examples.
 ### Table of Contents
 * [Find an encoder's parameters](#find-an-encoders-parameters)
 * [Fast x264 recording](#fast-x264-recording)
-* [Lossless video and RGB recording (H.264)](#lossless-video-and-rgb-recording-h-264)
+* [Lossless video and RGB recording (H.264)](#lossless-video-and-rgb-recording-h264)
 * [Lightweight video for editing](#lightweight-video-for-editing)
 * [Lossless or uncompressed audio (FLAC and PCM)](#lossless-or-uncompressed-audio-flac-and-pcm)
 
