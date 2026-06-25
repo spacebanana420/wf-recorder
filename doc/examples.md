@@ -7,7 +7,7 @@ Below is a more extensive list of recording examples.
 * [Fast x264 recording](#fast-x264-recording)
 * [Lossless video and RGB recording (H.264)](#lossless-video-and-rgb-recording-h264)
 * [Lightweight video for editing](#lightweight-video-for-editing)
-* [Lossless or uncompressed audio (FLAC and PCM)](#lossless-or-uncompressed-audio-flac-and-pcm)
+* [Lossless audio](#lossless-audio)
 
 ## Find an encoder's parameters
 FFmpeg lets you see what parameters, pixel formats and sample formats a particular encoder supports.
@@ -123,26 +123,13 @@ wf-recorder -c cfhd -p quality=high -x gbrp12le # 12bit/channel RGB, very heavy
 ```
 
 
-## Lossless or uncompressed audio (FLAC and PCM)
-### Lossless
+## Lossless audio
 FLAC is a lossless audio compression format, you can use it with:
 ```
 wf-recorder -a -C flac
 ```
 
-By default, the audio is recorded at 16bit. You can record at 32bit as well:
+By default, the audio is recorded at 16bit. You can record as s32 (24bit) as well:
 ```
 wf-recorder -a -C flac -X s32
-```
-
-### Uncompressed
-PCM encoders record uncompressed audio, directly equivalent to a WAV file.
-Multiple PCM encoders exist for different bit depths and integer, floating point precision and bit endianess. You can find all of them with:
-```
-ffmpeg -encoders | grep pcm_
-```
-
-24bit little endian example:
-```
-wf-recorder -a -C pcm_s24le
 ```
