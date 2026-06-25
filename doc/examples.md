@@ -1,4 +1,4 @@
-# wf-recorder examples
+# Video and Audio recording examples
 Below is a more extensive list of recording examples.
 
 ### Table of Contents
