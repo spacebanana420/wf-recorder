@@ -63,7 +63,7 @@ To specify a video codec, use the `-c <codec>` option. To modify codec parameter
 
 You can also specify an audio codec, using `-C <codec>`. Alternatively, the long form `--audio-codec` can be used. 
 
-### Supported video an audio codecs
+### Supported video and audio codecs
 You can use the following command to check all available video codecs
 ```
 ffmpeg -hide_banner -encoders | grep -E '^ V' | grep -F '(codec' | cut -c 8- | sort
