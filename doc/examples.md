@@ -9,7 +9,7 @@ Below is a more extensive list of recording examples.
 * [Lossless or uncompressed audio (FLAC and PCM)](#lossless-or-uncompressed-audio-flac-and-pcm)
 
 ## Find an encoder's parameters
-FFmpeg lets you see what parameters and supported pixel formats and sample formats for a particular encoder.
+FFmpeg lets you see what parameters, pixel formats and sample formats a particular encoder supports.
 The base for the command is `ffmpeg -h encoder=<encoder-name>`, for example:
 ```
 ffmpeg -h encoder=libx264
