@@ -20,7 +20,7 @@ ffmpeg -h encoder=png
 
 ## Fast x264 recording
 By default, x264 uses the `medium` preset which is very slow for the CPU, not so appropriate for realtime recording.
-As you raise the preset from `veryfast` to placebo, the difference in compression efficiency and file size is very slight, sometimes negligible.
+As you raise the preset from `veryfast` to `placebo`, the difference in compression efficiency and file size is very slight, sometimes negligible.
 
 The biggest difference comes in going from `ultrafast` to `superfast`, and `superfast` to `veryfast` has some improvements too.
 
