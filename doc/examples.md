@@ -1,4 +1,4 @@
-# Video and Audio recording examples
+# Video and Audio Recording Examples
 Below is a more extensive list of recording examples.
 
 ### Table of Contents
