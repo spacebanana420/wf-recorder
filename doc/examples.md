@@ -40,7 +40,7 @@ wf-recorder -c libx264 -p crf=0
 ```
 
 ### RGB
-By default, x264 uses YUV pixel format, which can at worst result in less color information (if you use subsampling instead of YUV 4:4:4) or at best result some color destruction (RGB to YUV conversion).
+By default, x264 uses the YUV pixel format, which can at worst result in less color information (if you use subsampling instead of YUV 4:4:4) or at best result in some color destruction (RGB to YUV conversion).
 
 You can record in x264 using the RGB pixel format by using the `libx264rgb` encoder:
 ```
