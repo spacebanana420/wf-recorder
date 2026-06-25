@@ -3,6 +3,7 @@ Below is a more extensive list of recording examples.
 
 ### Table of Contents
 * [Find an encoder's parameters](#find-an-encoders-parameters)
+* [Setting video resolution and scale](#setting-video-resolution-and-scale)
 * [Fast x264 recording](#fast-x264-recording)
 * [Lossless video and RGB recording (H.264)](#lossless-video-and-rgb-recording-h264)
 * [Lightweight video for editing](#lightweight-video-for-editing)
@@ -17,6 +18,41 @@ ffmpeg -h encoder=flac
 ffmpeg -h encoder=libvpx-vp9
 ffmpeg -h encoder=png
 ```
+
+
+## Setting video resolution and scale
+You can scale your video's final resolution with an FFmpeg filter:
+
+### Specified resolution
+You can specify the width and height of your video, in this example to 1920x1080:
+```
+wf-recorder -F scale=1920:1080
+```
+
+### Specify width or height, keep aspect ratio
+You can set the width or height while keeping the aspect ratio, the other dimension is calculated:
+```sh
+wf-recorder -F scale=1920:-1 # Specifies width as 1920
+wf-recorder -F scale=-1:1080 # Specifies height as 1080
+```
+
+### Multiply or divide resolution
+```sh
+wf-recorder -F scale=iw/2:ih/2 # Divides the resolution by 2
+wf-recorder -F scale=iw*3:ih*3 # Multiplies the resolution by 3
+```
+
+### Scaling filters
+The scale filter uses the `sws_flags` parameter to determine the scaling algorithm. By default, bicubic is used.
+You can find out which filters are supported with `ffmpeg -h filter=scale`.
+
+Examples:
+```sh
+wf-recorder -F scale=iw*2:ih*w -p sws_flags=neighbor # Scales the video by 2 with nearest neighbor scaling
+wf-recorder -F scale=1920:1080 -p sws_flags=bilinear # Scales the video to 1920x1080 with bilinear scaling
+wf-recorder -F scale=1920:1080 -p sws_flags=lanczos # Scales the video to 1920x1080 with lanczos scaling
+```
+
 
 ## Fast x264 recording
 By default, x264 uses the `medium` preset which is very slow for the CPU, not so appropriate for realtime recording.
