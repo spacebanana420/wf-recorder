@@ -31,7 +31,7 @@ wf-recorder -c libx264 -p preset=superfast
 
 ## Lossless video and RGB recording (H.264)
 ### Lossless
-The `x264` encoder can record in lossless compression. The `CRF` value adjust the video's control rate factor, in other words the quality of your video.
+The `x264` encoder can record in lossless compression. The `CRF` value adjusts the video's control rate factor, in other words the quality of your video.
 CRF keeps the quality always the same throughout the video, while the bitrate (and file size) varies depending on how much data the video needs to achieve this level.
 
 A CRF value of 0 results in lossless compression:
